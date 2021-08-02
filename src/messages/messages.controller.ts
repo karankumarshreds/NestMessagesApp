@@ -1,4 +1,4 @@
-import { Controller, Get, Post,  } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
 /// argument decorators
 import { Body, Param } from '@nestjs/common';
 
@@ -16,8 +16,9 @@ export class MessagesController {
   }
 
   @Get('/:id')
-  async getMessage() {
+  async getMessage(@Param('id') id: string) {
     // const messageId = @Param('id');
-    return 'Single Message';
+    const messageId = id;
+    return `Your message ID is ${messageId}`;
   }
 }
