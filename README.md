@@ -6,10 +6,18 @@
 
 `npm install -g @nestjs/cli`
 
-To start a new nest project
+## To start a new nest project
 
 > nest new messages
 
-To create a new module
+## To create a new module
 
 > nest generate module <name_of_module>
+
+`nest generate module messages`
+
+## To generate controller tied to the module
+
+> nest generate controller <name_of_module>/<name_of_controller> --flat
+
+`nest generate controller messages/messages --flat`
