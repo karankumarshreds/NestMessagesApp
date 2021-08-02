@@ -22,4 +22,4 @@
 
 `nest generate controller messages/messages --flat`
 
-`--flat` tells nest to NOT create an extra folder called controllers.
+`--flat` tells nest to NOT create an extra folder called controllers. If you want the controllers directory, you can get rid of this `--flat` option.
