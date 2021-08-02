@@ -21,3 +21,5 @@
 > nest generate controller <name_of_module>/<name_of_controller> --flat
 
 `nest generate controller messages/messages --flat`
+
+`--flat` tells nest to NOT create an extra folder called controllers.
