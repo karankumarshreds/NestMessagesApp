@@ -2,6 +2,9 @@ import { Controller, Get, Post } from '@nestjs/common';
 /// argument decorators
 import { Body, Param } from '@nestjs/common';
 
+// dto
+import { CreateMessageDto } from './dtos/create.messages.dto';
+
 @Controller('/messages')
 export class MessagesController {
   @Get()
@@ -10,7 +13,7 @@ export class MessagesController {
   }
 
   @Post()
-  async createMessage(@Body() body: any) {
+  async createMessage(@Body() body: CreateMessageDto) {
     console.log(body);
     return 'POST a message';
   }
