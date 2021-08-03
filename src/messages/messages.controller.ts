@@ -24,20 +24,20 @@ export class MessagesController {
   }
 
   @Get()
-  async listMessages(): Promise<Message> {
+  listMessages() {
     return this.messagesService.findAll();
   }
 
   @Post()
-  async createMessage(@Body() body: CreateMessageDto) {
-    const message = await this.messagesService.create(body.content);
+  createMessage(@Body() body: CreateMessageDto) {
+    const message = this.messagesService.create(body.content);
     return message;
   }
 
   @Get('/:id')
-  async getMessage(@Param('id') id: string): Promise<Message> {
+  async getMessage(@Param('id') id: string) {
     const messageId = id;
-    const message = await this.messagesService.findOne(messageId);
+    const message = this.messagesService.findOne(messageId);
     return message;
   }
 }

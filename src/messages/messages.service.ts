@@ -17,11 +17,11 @@ export class MessagesService {
     this.messagesRepo = new MessagesResository();
   }
 
-  findOne(id: string): Promise<Message> {
+  findOne(id: string) {
     return this.messagesRepo.findOne(id);
   }
 
-  findAll(): Promise<Message> {
+  findAll() {
     return this.messagesRepo.findAll();
   }
 
