@@ -1,23 +1,16 @@
 import { readFile, writeFile } from 'fs/promises';
 
-interface Message {
-  [id: string]: {
-    content: string;
-    id: number;
-  };
-}
-
 export class MessagesResository {
-  async getMessages(): Promise<Message> {
+  async getMessages() {
     const contents = await readFile('messages.json', 'utf-8');
     return JSON.parse(contents);
   }
 
-  async findOne(id: string): Promise<Message> {
+  async findOne(id: string) {
     return await this.getMessages()[id];
   }
 
-  async findAll(): Promise<Message> {
+  async findAll() {
     return await this.getMessages();
   }
 
