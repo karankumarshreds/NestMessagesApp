@@ -13,6 +13,7 @@ export class MessagesService {
   constructor() {
     // MessagesService is creating its own dependencies
     // DO NOT DO THIS ON REAL APPS !
+    // USE DEPENDENCY INJECTION INSTEAD
     this.messagesRepo = new MessagesResository();
   }
 
