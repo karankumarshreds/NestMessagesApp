@@ -24,6 +24,9 @@ interface Message {
  * IN SHORT, it makes the instances of the dependencies and passes them wherever they
  * are being used. This is done using @Injectable decorator which is NESTJS built in
  * Dependency Injection system.
+ *
+ * ALSO, make sure you add all the injectable decorated classes in the @MessagesModule
+ * as an array to the property called @provider
  */
 
 @Injectable()
