@@ -13,5 +13,5 @@ Content-Type: application/json
 
 ### Get single message 
 
-GET http://localhost:3000/messages/9682
+GET http://localhost:3000/messages/9683
 

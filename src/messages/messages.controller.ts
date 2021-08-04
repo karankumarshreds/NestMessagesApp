@@ -6,21 +6,12 @@ import { CreateMessageDto } from './dtos/create.messages.dto';
 // service
 import { MessagesService } from './messages.service';
 
-interface Message {
-  [id: string]: {
-    content: string;
-    id: number;
-  };
-}
-
 @Controller('/messages')
 export class MessagesController {
   messagesService: MessagesService;
 
-  constructor() {
-    // DO NOT DO THIS ON REAL APP
-    // USE DEPENDENCY INJECTION INSTEAD
-    this.messagesService = new MessagesService();
+  constructor(messagesService: MessagesService) {
+    this.messagesService = messagesService;
   }
 
   @Get()
