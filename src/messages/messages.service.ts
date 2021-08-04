@@ -22,7 +22,8 @@ interface Message {
  * Then, it also makes a list of instances of those dependencies (messagesRepo) in
  * order to make it reusable for wherever else that instance is needed.
  * IN SHORT, it makes the instances of the dependencies and passes them wherever they
- * are being used. This is done using @Injectable decorator which is NESTJS'S DI decorator.
+ * are being used. This is done using @Injectable decorator which is NESTJS built in
+ * Dependency Injection system.
  */
 
 @Injectable()
